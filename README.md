@@ -1,10 +1,10 @@
-# NexaBank
+# 🏦 NexaBank
 
 <div align="center">
 
 ![NexaBank Animated Preview](assets/nexabank-screenshots-hover.gif)
 
-### Modern Digital Banking Dashboard
+### 💳 Modern Digital Banking Dashboard
 
 A responsive frontend banking dashboard built as a portfolio and learning project.
 
@@ -15,15 +15,15 @@ A responsive frontend banking dashboard built as a portfolio and learning projec
 
 ---
 
-## Overview
+## 🌟 Overview
 
 **NexaBank** is a modern digital banking interface focused on a clean, responsive and interactive user experience.
 
 The project was designed to practice real-world frontend development concepts such as responsive layouts, reusable UI patterns, interactive dashboards, transaction interfaces and mobile-friendly navigation.
 
-## Preview
+## 📸 Preview
 
-### Dashboard
+### 💻 Dashboard
 
 <div align="center">
 
@@ -31,7 +31,7 @@ The project was designed to practice real-world frontend development concepts su
 
 </div>
 
-### Analytics & Spending
+## 📊 Analytics & Spending
 
 <div align="center">
 
@@ -39,13 +39,13 @@ The project was designed to practice real-world frontend development concepts su
 
 </div>
 
-### Animated Showcase
+### 🎞 Animated Showcase
 
 The animated preview uses a subtle floating motion to make the screenshots feel more dynamic and polished.
 
 ---
 
-## Features
+## ✨ Features
 
 | Feature | Description |
 |---|---|
@@ -60,7 +60,7 @@ The animated preview uses a subtle floating motion to make the screenshots feel 
 | 📱 Responsive Design | Optimized for desktop, tablet and mobile |
 | 📄 CSV Export | Export transaction data |
 
-## Tech Stack
+## 🛠 Tech Stack
 
 - HTML5
 - CSS3
@@ -68,7 +68,7 @@ The animated preview uses a subtle floating motion to make the screenshots feel 
 - SVG
 - Responsive Web Design
 
-## Project Structure
+## 📂 Project Structure
 
 ```text
 NexaBank/
@@ -84,7 +84,7 @@ NexaBank/
 └── .gitignore
 ```
 
-## Run Locally
+## 🖥 Run Locally
 
 ```bash
 git clone https://github.com/Graviton25/NexaBank.git
@@ -93,11 +93,11 @@ cd NexaBank
 
 Open `index.html` in your browser.
 
-## Live Demo
+## 🌐 Live Demo
 
 https://graviton25.github.io/NexaBank/
 
-## Future Development
+## 🚀 Future Development
 
 Possible next steps include:
 
@@ -110,11 +110,11 @@ Possible next steps include:
 - Secure banking infrastructure
 - Audit logs and production security
 
-## Disclaimer
+## ⚠️ Disclaimer
 
 NexaBank is a **frontend portfolio and learning project**. It is not connected to a real bank and does not process real financial transactions.
 
-## Author
+## 👨‍💻 Author
 
 **Nathnael Andualem**
 
