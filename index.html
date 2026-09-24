@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaBank — Digital Banking Dashboard</title>
+    <meta name="description" content="NexaBank premium digital banking dashboard — frontend portfolio project.">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="brand-mark">
+            N
+          </div>
+          <div>
+            <strong>Nexa<span>Bank</span></strong>
+            <small>Digital banking</small>
+          </div>
+        </div>
+        <nav class="nav">
+          <button class="nav-item active" data-page="overview"><span>⌂</span>Overview</button>
+          <button class="nav-item" data-page="accounts"><span>◫</span>Accounts</button>
+          <button class="nav-item" data-page="transfers"><span>⇄</span>Transfers</button>
+          <button class="nav-item" data-page="transactions"><span>↗</span>Transactions</button>
+          <button class="nav-item" data-page="cards"><span>▣</span>Cards</button>
+          <button class="nav-item" data-page="settings"><span>⚙</span>Settings</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="security-mini">
+            <span class="status-dot"></span>
+            <div>
+              <b>Protected</b>
+              <small>Demo environment</small>
+            </div>
+          </div>
+          <button class="profile-mini" id="profileBtn"><div class="avatar">NA</div><div><b>Nathnael</b><small>Personal account</small></div><span>•••</span></button>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <button class="icon-btn mobile-only" id="menuBtn">☰</button>
+          <div class="top-title">
+            <span id="eyebrow">Personal banking</span>
+            <h1 id="pageTitle">
+              Good evening, Nathnael.
+            </h1>
+          </div>
+          <div class="top-actions">
+            <button class="icon-btn" id="themeBtn" title="Toggle theme">☼</button>
+            <button class="icon-btn notification" id="notificationBtn" title="Notifications">♢<i></i></button>
+            <button class="avatar desktop-avatar">NA</button>
+          </div>
+        </header>
+        <section class="content">
+          <div class="page active" id="page-overview">
+            <div class="hero-row">
+              <section class="balance-card">
+                <div class="balance-head">
+                  <div>
+                    <span>Total available balance</span>
+                    <button class="eye" id="toggleBalance">◉</button>
+                  </div>
+                  <span class="pill positive">+4.8% this month</span>
+                </div>
+                <div class="balance-value" id="balanceValue">
+                  ETB 284,650.75
+                </div>
+                <div class="balance-meta">
+                  <span>Last updated just now</span>
+                  <button class="link-btn" data-page="accounts">View accounts →</button>
+                </div>
+                <div class="balance-glow">
+                </div>
+              </section>
+              <section class="virtual-card" id="virtualCard">
+                <div class="card-top">
+                  <span>NEXA</span>
+                  <span>VISA</span>
+                </div>
+                <div class="chip">
+                </div>
+                <div class="card-number">
+                  •••• &nbsp; 4821 &nbsp; •••• &nbsp; 9174
+                </div>
+                <div class="card-foot">
+                  <div>
+                    <small>CARD HOLDER</small>
+                    <b>NATHNAEL ANDUALEM</b>
+                  </div>
+                  <div>
+                    <small>EXPIRES</small>
+                    <b>09/29</b>
+                  </div>
+                  <div>
+                    <small>TYPE</small>
+                    <b>DEBIT</b>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="quick-actions">
+              <button data-page="transfers"><span>↗</span><b>Send money</b><small>Transfer instantly</small></button>
+              <button data-action="request"><span>↓</span><b>Request money</b><small>Get paid securely</small></button>
+              <button data-action="deposit"><span>＋</span><b>Add funds</b><small>Top up your balance</small></button>
+              <button data-action="freeze"><span>❄</span><b>Freeze card</b><small>Lock in one tap</small></button>
+            </div>
+            <div class="stats-grid">
+              <article class="stat">
+                <div class="stat-icon income">
+                  ↗
+                </div>
+                <div>
+                  <small>Income</small>
+                  <strong>ETB 72,450</strong>
+                  <span class="up">+12.4%</span>
+                </div>
+              </article>
+              <article class="stat">
+                <div class="stat-icon spend">
+                  ↘
+                </div>
+                <div>
+                  <small>Spending</small>
+                  <strong>ETB 31,820</strong>
+                  <span class="down">-3.2%</span>
+                </div>
+              </article>
+              <article class="stat">
+                <div class="stat-icon save">
+                  ◇
+                </div>
+                <div>
+                  <small>Saved this month</small>
+                  <strong>ETB 18,600</strong>
+                  <span class="up">+8.1%</span>
+                </div>
+              </article>
+              <article class="stat">
+                <div class="stat-icon score">
+                  ✓
+                </div>
+                <div>
+                  <small>Security score</small>
+                  <strong>Excellent</strong>
+                  <span class="up">92 / 100</span>
+                </div>
+              </article>
+            </div>
+            <div class="dashboard-grid">
+              <section class="panel chart-panel">
+                <div class="panel-head">
+                  <div>
+                    <span class="section-label">Cash flow</span>
+                    <h2>
+                      Money movement
+                    </h2>
+                  </div>
+                  <select id="chartRange">
+                    <option>
+                      Last 7 months
+                    </option>
+                    <option>
+                      Last 30 days
+                    </option>
+                  </select>
+                </div>
+                <div class="chart-wrap">
+                  <svg viewBox="0 0 760 250" preserveAspectRatio="none" aria-label="Cash flow chart"><defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-opacity=".24"/><stop offset="100%" stop-opacity="0"/></linearGradient></defs><g class="grid-lines"><line x1="0" y1="45" x2="760" y2="45"/><line x1="0" y1="105" x2="760" y2="105"/><line x1="0" y1="165" x2="760" y2="165"/><line x1="0" y1="225" x2="760" y2="225"/></g><path class="area-fill" d="M0 195 C55 170,70 185,120 150 S190 120,240 145 S305 82,365 105 S425 140,485 92 S555 70,610 105 S675 52,760 70 L760 250 L0 250 Z"/><path class="chart-line" d="M0 195 C55 170,70 185,120 150 S190 120,240 145 S305 82,365 105 S425 140,485 92 S555 70,610 105 S675 52,760 70"/></svg>
+                  <div class="chart-labels">
+                    <span>Apr</span>
+                    <span>May</span>
+                    <span>Jun</span>
+                    <span>Jul</span>
+                    <span>Aug</span>
+                    <span>Sep</span>
+                    <span>Now</span>
+                  </div>
+                </div>
+                <div class="legend">
+                  <span><i class="legend-line"></i>Balance trend</span>
+                  <span>Peak: ETB 298,420</span>
+                </div>
+              </section>
+              <section class="panel spending-panel">
+                <div class="panel-head">
+                  <div>
+                    <span class="section-label">Spending</span>
+                    <h2>
+                      Where money goes
+                    </h2>
+                  </div>
+                  <button class="link-btn" data-page="transactions">Details →</button>
+                </div>
+                <div class="donut-row">
+                  <div class="donut">
+                    <div>
+                      <strong>ETB 31.8K</strong>
+                      <small>This month</small>
+                    </div>
+                  </div>
+                  <div class="spend-list">
+                    <div>
+                      <span><i class="dot d1"></i>Food & dining</span>
+                      <b>32%</b>
+                    </div>
+                    <div>
+                      <span><i class="dot d2"></i>Transport</span>
+                      <b>24%</b>
+                    </div>
+                    <div>
+                      <span><i class="dot d3"></i>Shopping</span>
+                      <b>21%</b>
+                    </div>
+                    <div>
+                      <span><i class="dot d4"></i>Bills</span>
+                      <b>15%</b>
+                    </div>
+                    <div>
+                      <span><i class="dot d5"></i>Other</span>
+                      <b>8%</b>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="dashboard-grid lower">
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <span class="section-label">Activity</span>
+                    <h2>
+                      Recent transactions
+                    </h2>
+                  </div>
+                  <button class="link-btn" data-page="transactions">View all →</button>
+                </div>
+                <div id="recentTransactions" class="transaction-list">
+                </div>
+              </section>
+              <section class="panel goal-panel">
+                <div class="panel-head">
+                  <div>
+                    <span class="section-label">Savings goal</span>
+                    <h2>
+                      New laptop fund
+                    </h2>
+                  </div>
+                  <span class="goal-icon">↗</span>
+                </div>
+                <div class="goal-amount">
+                  <strong>ETB 68,400</strong>
+                  <span>of ETB 100,000</span>
+                </div>
+                <div class="progress">
+                  <i style="width:68.4%"></i>
+                </div>
+                <div class="goal-meta">
+                  <span>68.4% complete</span>
+                  <b>ETB 31,600 left</b>
+                </div>
+                <div class="goal-note">
+                  At your current pace, you could reach this goal in about 3 months.
+                </div>
+                <button class="outline-btn" data-action="goal">Manage goal</button>
+              </section>
+            </div>
+          </div>
+          <div class="page" id="page-accounts">
+            <div class="page-heading">
+              <div>
+                <span class="section-label">Accounts</span>
+                <h2>
+                  Manage your money
+                </h2>
+                <p>
+                  Keep track of every account in one place.
+                </p>
+              </div>
+              <button class="primary-btn" data-action="newAccount">＋ Add account</button>
+            </div>
+            <div class="account-grid">
+              <article class="account-card featured">
+                <span class="account-type">PRIMARY • ETB</span>
+                <h3>
+                  Everyday Account
+                </h3>
+                <strong>ETB 184,650.75</strong>
+                <small>•••• 4821</small>
+                <div class="account-bottom">
+                  <span>Available now</span>
+                  <button class="link-btn">Details →</button>
+                </div>
+              </article>
+              <article class="account-card">
+                <span class="account-type">SAVINGS • ETB</span>
+                <h3>
+                  Growth Savings
+                </h3>
+                <strong>ETB 100,000.00</strong>
+                <small>•••• 7206</small>
+                <div class="account-bottom">
+                  <span>Goal-linked</span>
+                  <button class="link-btn">Details →</button>
+                </div>
+              </article>
+              <article class="account-card">
+                <span class="account-type">USD • FOREIGN</span>
+                <h3>
+                  USD Wallet
+                </h3>
+                <strong>$ 1,250.30</strong>
+                <small>•••• 1148</small>
+                <div class="account-bottom">
+                  <span>≈ ETB 76,220</span>
+                  <button class="link-btn">Details →</button>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="page" id="page-transfers">
+            <div class="page-heading">
+              <div>
+                <span class="section-label">Transfers</span>
+                <h2>
+                  Move money securely
+                </h2>
+                <p>
+                  Send funds to a saved recipient or enter new details.
+                </p>
+              </div>
+              <span class="secure-badge">✓ Secure transfer</span>
+            </div>
+            <div class="transfer-layout">
+              <section class="panel transfer-form">
+                <h3>
+                  New transfer
+                </h3>
+                <label>From account<select><option>Everyday Account — ETB 184,650.75</option><option>Growth Savings — ETB 100,000.00</option></select></label>
+                <label>Recipient<select id="recipient"><option>Choose recipient...</option><option>Abel Tesfaye • •••• 1820</option><option>Melat Girma • •••• 6642</option><option>Arsema Bekele • •••• 9041</option></select></label>
+                <label>Amount<div class="amount-input"><span>ETB</span><input id="transferAmount" type="number" placeholder="0.00" min="1"></div></label>
+                <label>Note<input id="transferNote" placeholder="What's this transfer for?"></label>
+                <button class="primary-btn wide" id="sendTransfer">Review transfer →</button>
+              </section>
+              <section class="panel recipients">
+                <div class="panel-head">
+                  <div>
+                    <span class="section-label">Saved</span>
+                    <h3>
+                      Recipients
+                    </h3>
+                  </div>
+                  <button class="link-btn">Manage</button>
+                </div>
+                <div class="recipient-card">
+                  <div class="avatar blue">
+                    AT
+                  </div>
+                  <div>
+                    <b>Abel Tesfaye</b>
+                    <small>Commercial Bank • 1820</small>
+                  </div>
+                  <button data-fill="Abel Tesfaye">→</button>
+                </div>
+                <div class="recipient-card">
+                  <div class="avatar purple">
+                    MG
+                  </div>
+                  <div>
+                    <b>Melat Girma</b>
+                    <small>Awash Bank • 6642</small>
+                  </div>
+                  <button data-fill="Melat Girma">→</button>
+                </div>
+                <div class="recipient-card">
+                  <div class="avatar orange">
+                    AB
+                  </div>
+                  <div>
+                    <b>Arsema Bekele</b>
+                    <small>Dashen Bank • 9041</small>
+                  </div>
+                  <button data-fill="Arsema Bekele">→</button>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="page" id="page-transactions">
+            <div class="page-heading">
+              <div>
+                <span class="section-label">Transactions</span>
+                <h2>
+                  Your money, explained.
+                </h2>
+                <p>
+                  Search and review recent account activity.
+                </p>
+              </div>
+              <button class="outline-btn" id="downloadCsv">↓ Download statement</button>
+            </div>
+            <div class="panel">
+              <div class="filters">
+                <div class="search">
+                  <span>⌕</span>
+                  <input id="transactionSearch" placeholder="Search transactions...">
+                </div>
+                <select id="transactionFilter">
+                  <option value="all">
+                    All transactions
+                  </option>
+                  <option value="income">
+                    Money in
+                  </option>
+                  <option value="expense">
+                    Money out
+                  </option>
+                </select>
+              </div>
+              <div id="transactionTable">
+              </div>
+            </div>
+          </div>
+          <div class="page" id="page-cards">
+            <div class="page-heading">
+              <div>
+                <span class="section-label">Cards</span>
+                <h2>
+                  Your cards
+                </h2>
+                <p>
+                  Control spending and card security from one place.
+                </p>
+              </div>
+              <button class="primary-btn" data-action="newCard">＋ New virtual card</button>
+            </div>
+            <div class="cards-layout">
+              <section class="virtual-card large">
+                <div class="card-top">
+                  <span>NEXA</span>
+                  <span>VISA</span>
+                </div>
+                <div class="chip">
+                </div>
+                <div class="card-number">
+                  •••• &nbsp; 4821 &nbsp; •••• &nbsp; 9174
+                </div>
+                <div class="card-foot">
+                  <div>
+                    <small>CARD HOLDER</small>
+                    <b>NATHNAEL ANDUALEM</b>
+                  </div>
+                  <div>
+                    <small>EXPIRES</small>
+                    <b>09/29</b>
+                  </div>
+                  <div>
+                    <small>DEBIT</small>
+                    <b>ACTIVE</b>
+                  </div>
+                </div>
+              </section>
+              <section class="panel card-controls">
+                <h3>
+                  Card controls
+                </h3>
+                <button class="control-row" data-action="freeze"><span>❄</span><div><b>Freeze card</b><small>Temporarily stop transactions</small></div><i>›</i></button>
+                <button class="control-row" data-action="limits"><span>◫</span><div><b>Spending limits</b><small>Daily limit: ETB 50,000</small></div><i>›</i></button>
+                <button class="control-row" data-action="pin"><span>●</span><div><b>Change PIN</b><small>Update your card PIN securely</small></div><i>›</i></button>
+              </section>
+            </div>
+          </div>
+          <div class="page" id="page-settings">
+            <div class="page-heading">
+              <div>
+                <span class="section-label">Settings</span>
+                <h2>
+                  Account preferences
+                </h2>
+                <p>
+                  Manage your profile and security preferences.
+                </p>
+              </div>
+            </div>
+            <div class="settings-grid">
+              <section class="panel settings-section">
+                <h3>
+                  Profile
+                </h3>
+                <label>Full name<input value="Nathnael Andualem"></label>
+                <label>Email<input value="nathnaelandualem25@gmail.com"></label>
+                <label>Phone<input value="+251 987 657 133"></label>
+                <button class="primary-btn" data-action="save">Save changes</button>
+              </section>
+              <section class="panel settings-section">
+                <h3>
+                  Security
+                </h3>
+                <button class="security-row"><span>✓</span><div><b>Two-factor authentication</b><small>Enabled for this demo</small></div><em>ON</em></button>
+                <button class="security-row"><span>⌁</span><div><b>Login alerts</b><small>Get notified about new sessions</small></div><em>ON</em></button>
+                <button class="security-row"><span>◈</span><div><b>Trusted devices</b><small>2 devices connected</small></div><em>2</em></button>
+              </section>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="bottom-nav">
+      <button data-page="overview">⌂<span>Home</span></button>
+      <button data-page="transactions">↗<span>Activity</span></button>
+      <button data-page="transfers" class="center-action">＋</button>
+      <button data-page="cards">▣<span>Cards</span></button>
+      <button data-page="settings">⚙<span>More</span></button>
+    </div>
+    <div class="modal-backdrop" id="modalBackdrop">
+      <div class="modal" id="modal">
+        <button class="modal-close" id="modalClose">×</button>
+        <div id="modalContent">
+        </div>
+      </div>
+    </div>
+    <div class="toast" id="toast">
+      <span>✓</span>
+      <div>
+        <b id="toastTitle">Done</b>
+        <small id="toastText">Action completed.</small>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
