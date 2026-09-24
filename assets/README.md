@@ -27,7 +27,7 @@ The project was designed to practice real-world frontend development concepts su
 
 <div align="center">
 
-<img src="assets/dashboard-mobile.jpg" alt="NexaBank mobile banking dashboard" width="360">
+<img src="assets/assets/dashboard-mobile.jpg" alt="NexaBank mobile banking dashboard" width="360">
 
 </div>
 
