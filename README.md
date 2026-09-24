@@ -121,6 +121,6 @@ NexaBank is a **frontend portfolio and learning project**. It is not connected t
 Civil Engineering Student @ AASTU  
 Aspiring Software Developer
 
-📧 Email:nathnaelandualem25@gmail.com
+📧 Email: nathnaelandualem25@gmail.com
 
 🔗 GitHub: https://github.com/Graviton25
